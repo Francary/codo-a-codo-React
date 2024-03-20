@@ -1,4 +1,4 @@
-let estado_linterna = "apagado";
+let estado_linterna = false;
 
 let sonido_batman =  document.querySelector("#bati_encendido")
 
@@ -8,25 +8,26 @@ let batman = document.querySelector(".batman")
 
 let bati_boton = document.querySelector(".bati_boton")
 
+// const controlar_linterna = () => {
+//     if (estado_linterna == false){
+//         estado_linterna = true;
+//         sonido()
+//         batman.classList.add("batman_activo")
+//     }
+//     else{
+//         estado_linterna = false
+//         sonido()
+//         batman.classList.remove("batman_activo")
+//     }
+// }
 
 
-bati_boton.addEventListener("click", controlar_linterna);
+const controlar_linterna = () => {
+    estado_linterna = !estado_linterna;
+    estado_linterna ? (batman.classList.add("batman_activo") ,sonido()) : (batman.classList.remove("batman_activo") ,sonido())
+};
 
-function controlar_linterna ( ) {
-    if (estado_linterna == "apagado"){
-        estado_linterna = "encendido";
-        sonido()
-        batman.classList.add("batman_activo")
-    }
-    else{
-        estado_linterna = "apagado"
-        sonido()
-        batman.classList.remove("batman_activo")
-    }
-
-}
-
-function sonido () {
+const sonido =  () => {
     if(sonido_batman.paused){
         sonido_click.play()
         sonido_batman.play()
@@ -37,3 +38,4 @@ function sonido () {
     }
 
 }
+bati_boton.addEventListener("click", controlar_linterna);
