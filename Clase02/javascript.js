@@ -21,11 +21,21 @@ sumar(num1,num2)
 
 let edad = 18
 const mayorEdad = () =>{
+    document.write(`Verificar Edad con IF BASICO <br>`)
 if (edad >= 18){
-    document.write(`Puede Ingresar es mayor de Edad`)
+    document.write(`Puede Ingresar es mayor de Edad <br><br>`)
 }
 else{
-    document.write(`No puedes pasar solmante tienes ${edad} años`)
+    document.write(`No puedes pasar solmante tienes ${edad} años <br><br>`)
 }
 }
 mayorEdad()
+
+
+// if Ternario
+
+const mayorEdad2 = () => {
+    document.write(`Verificar Edad con IF TERNARIO <br>`)
+    edad >= 18 ? document.write(`Puede Ingresar es mayor de Edad <br><br>`):document.write(`No puedes pasar solmante tienes ${edad} años <br><br>`)
+}
+mayorEdad2()
