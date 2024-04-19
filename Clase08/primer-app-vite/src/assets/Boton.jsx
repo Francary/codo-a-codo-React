@@ -1,7 +1,7 @@
 const Boton = ({numero, nombre}) => {
     return(
 <>
-<h1>{nombre}</h1>
+<h3>{nombre}</h3>
 <button>{numero}</button>
 </>
     )

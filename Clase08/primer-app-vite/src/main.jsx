@@ -17,7 +17,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
           />
     <Card apellido = "Ronaldo"
           nacimiento= {1984}
-          clubes={["Lisbo","Mancheste","Real Madrid","Nasar"]}
+          clubes={["Lisboa","Mancheste","Real Madrid","Nasar"]}
           mundial = {false}
           late={true}
           />
